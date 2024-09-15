@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV</title>
+    <style>
+      .container {
+        margin: 50px auto;
+
+        border: 3px solid black;
+        height: 81vh;
+        width: 81vw;
+        position: relative;
+      }
+      .tv {
+        position: absolute;
+        top: 2%;
+        left: 34%;
+        height: 36%;
+        width: 36%;
+        background-color: black;
+        border: 3px solid white;
+        border-radius: 6px;
+        background-image: url("https://media.istockphoto.com/id/173240143/photo/tv-with-two-clipping-paths.jpg?s=612x612&w=0&k=20&c=TRApgjWXU7VPzwfXRMxuskU7bbfokpLArfOF78mPB0k=");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 450px 250px;
+      }
+      .remote {
+        height: 27%;
+        width: 9%;
+        background-color: #2c1d01;
+        border: 3px solid black;
+        position: absolute;
+        border-radius: 6px;
+        bottom: 2%;
+        left: 48%;
+        transform: perspective(250px) rotateX(18deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        transition: all 300ms;
+      }
+      .remote span {
+        color: white;
+        box-shadow: inset 0 0 10px black;
+      }
+      .remote span:hover {
+        background-color: green;
+        transform: scale(1.2);
+      }
+      .remote .btn span:hover {
+        background-color: green;
+      }
+      .tv .content {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-color: black;
+        height: 155px;
+        width: 355px;
+      }
+      .tv .content span {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        font-size: 2.7rem;
+      }
+      input
+      {
+        display: none;
+      }
+
+      #on:checked + .on
+      {
+            z-index: 1;
+      } 
+      #off:checked + .off
+      {
+            z-index: 1;
+      } 
+      #html:checked + .html
+      {
+            z-index: 1;
+      } 
+      #css:checked + .css
+      {
+            z-index: 1;
+      } 
+      #js:checked + .js
+      {
+            z-index: 1;
+      } 
+      #py:checked + .py
+      {
+            z-index: 1;
+      } 
+         </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tv">
+        <input type="radio" name="content" id="on">
+        <div class="content on">
+          <span>ON</span>
+        </div>
+
+        <input type="radio" name="content" id="off">
+        <div class="content off">
+            <span>OFF</span>
+          </div>
+
+          <input type="radio" name="content" id="html">
+          <div class="content html">
+            <span>HTML</span>
+          </div>
+
+          <input type="radio" name="content" id="css">
+          <div class="content css">
+            <span>CSS</span>
+          </div>
+
+          <input type="radio" name="content" id="js">
+          <div class="content js">
+            <span>JAVA SCRIPT</span>
+          </div>
+          
+          <input type="radio" name="content" id="py">
+          <div class="content py">
+            <span>PYTHON</span>
+          </div>
+      </div>
+      <div class="remote">
+        <div class="btn"><label for="on"><span>On</span></label> &nbsp; <label for="off"><span>Off</span></label></div>
+
+        <label for="html"><span>HTML</span></label>
+
+        <label for="css"><span>CSS</span></label>
+
+        <label for="js"><span>Java Script</span></label>
+       
+       <label for="py"><span>Python</span></label> 
+      </div>
+    </div>
+  </body>
+</html>
